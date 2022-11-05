@@ -225,11 +225,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .benefits-list {
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
 }
 
 .benefits-item {
-    max-width: 270px;
+    flex-basis: calc((100%-90px)/4);
 }
 
 .benefits-subtitle {
