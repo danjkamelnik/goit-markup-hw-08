@@ -1,4 +1,4 @@
-/* RESET ALL STYLES */
+/* ---RESET ALL STYLES--- */
 
 *{
 	padding: 0;
@@ -38,9 +38,9 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
-/* END RESET */
+/* ---END RESET--- */
 
-/* START SETTINGS */
+/* ---START SETTINGS--- */
 
 :root {
     --main-color: #2196F3;
@@ -69,11 +69,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     clip: rect(0 0 0 0);
 }
 
-/* END SETTINGS */
+/* ---END SETTINGS--- */
 
-/* STATIC SECTION */
+/* ---STATIC SECTION--- */
 
-/* HEADER */
+/* ---HEADER--- */
 
 .header {
     border-bottom: 1px solid #ECECEC;
@@ -116,6 +116,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     color: var(--title-color);
 }
 
+.active-page {
+    color: var(--main-color);
+}
+
 .menu-link:hover,
 .menu-link:focus {
     color: var(--main-color);
@@ -151,7 +155,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 
-/* FOOTER */
+/* ---FOOTER--- */
 
 .footer {
     padding: 60px 0;
@@ -225,9 +229,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 /* ---END STATIC SECTION--- */
 
-/* START MAIN PAGE */
+/* ---START MAIN PAGE--- */
 
-/* SECTION HERO */
+/* ---SECTION HERO--- */
 
 .hero {
     max-width: 1600px;
@@ -265,7 +269,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     color: #FFFFFF;
 }
 
-/* SECTION BENEFITS */
+/* ---SECTION BENEFITS--- */
 
 .benefits-list {
     display: flex;
@@ -300,7 +304,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     color: var(--text-color);
 }
 
-/* SECTION SERVICE */
+/* ---SECTION SERVICE--- */
 
 .service {
     padding-bottom: 94px;
@@ -321,7 +325,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     justify-content: space-between;
 }
 
-/* SECTION TEAM */
+/* ---SECTION TEAM--- */
 
 .team {
     background-color: #F5F4FA;
@@ -377,16 +381,17 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     gap: 10px;
 }
 
-.team-social-item {
+.team-social-link {
+    display: flex;
     width: 44px;
     height: 44px;
-    padding: 12px;
-    background-color: #fff;
-    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
 }
 
-.team-social-item:hover,
-.team-social-item:focus {
+.team-social-link:hover,
+.team-social-link:focus {
     background-color: var(--main-color);
 }
 
@@ -394,18 +399,20 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     fill: #AFB1B8;
 }
 
-.team-social-item:hover .team-social-icon,
-.team-social-item:focus .team-social-icon {
+.team-social-link:hover .team-social-icon,
+.team-social-link:focus .team-social-icon {
     fill: #fff;
 }
+
+/* ---SECTION CLIENTS--- */
 
 .clients-title {
     font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
+    color: var(--title-color);
     margin-bottom: 50px;
 }
 
@@ -439,9 +446,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 /* ---END MAIN PAGE=== */
 
-/* START PORTFOLIO PAGE */
+/* ---START PORTFOLIO PAGE--- */
 
-/* SECTION PORTFOLIO */
+/* ---SECTION PORTFOLIO--- */
 
 .filter-list {
     display: flex;
