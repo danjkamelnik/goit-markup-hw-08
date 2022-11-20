@@ -169,6 +169,7 @@ h6 {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--title-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .active-page {
@@ -178,8 +179,9 @@ h6 {
 .active-page::after {
   content: '';
   display: block;
-  width: 100%;
+  width: 108%;
   height: 4px;
+  transform: translateX(-4%);
   background: var(--primary-color);
   border-radius: 2px;
   margin-top: 28px;
@@ -204,6 +206,7 @@ h6 {
   color: var(--text-color);
   display: flex;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link:hover,
@@ -212,12 +215,13 @@ h6 {
 }
 
 .contact-icon {
-  fill: var(--text-color);
+  fill: currentColor;
   margin-right: 10px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-link:hover .contact-icon {
-  fill: var(--primary-color);
+  fill: currentColor;
 }
 
 /* ---FOOTER--- */
@@ -248,6 +252,7 @@ h6 {
   font-style: normal;
   letter-spacing: 0.03em;
   color: #ffffff;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contact-map:hover,
@@ -259,6 +264,7 @@ h6 {
   font-style: normal;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-contact-link:hover,
@@ -350,6 +356,8 @@ h6 {
   background-color: #fff;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover {
@@ -423,11 +431,13 @@ h6 {
 }
 
 .benefits-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 270px;
   height: 120px;
   background: #f5f4fa;
   border-radius: 4px;
-  padding: 25px 100px;
   margin-bottom: 30px;
 }
 
@@ -463,8 +473,12 @@ h6 {
 
 .service-label {
   position: absolute;
+  left: 0;
   bottom: 0;
-  width: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
 }
@@ -472,11 +486,9 @@ h6 {
 .service-label-title {
   font-weight: 700;
   line-height: 1.14;
-  text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #fff;
-  padding: 27px 0;
 }
 
 /* ---SECTION TEAM--- */
@@ -656,7 +668,7 @@ h6 {
   color: #fff;
   background-color: rgba(33, 150, 243, 0.9);
   padding: 63px 24px;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
