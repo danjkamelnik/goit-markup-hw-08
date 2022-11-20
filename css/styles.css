@@ -85,7 +85,7 @@ h6 {
 /* ---START SETTINGS--- */
 
 :root {
-  --main-color: #2196f3;
+  --primary-color: #2196f3;
   --title-color: #212121;
   --text-color: #757575;
 }
@@ -98,6 +98,16 @@ h6 {
 
 .section {
   padding: 94px 0;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  margin-bottom: 50px;
 }
 
 .visually-hidden {
@@ -119,10 +129,10 @@ h6 {
 
 .header {
   border-bottom: 1px solid #ececec;
+  height: 80px;
 }
 
 .header-content {
-  height: 80px;
   display: flex;
   align-items: center;
 }
@@ -138,15 +148,18 @@ h6 {
 }
 
 .web {
-  color: var(--main-color);
+  color: var(--primary-color);
 }
 
 .nav {
   margin-left: 93px;
+  display: flex;
+  align-items: center;
   margin-right: auto;
 }
 
 .menu {
+  padding-top: 32px;
   display: flex;
   gap: 50px;
 }
@@ -159,16 +172,27 @@ h6 {
 }
 
 .active-page {
-  color: var(--main-color);
+  color: var(--primary-color);
+}
+
+.active-page::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+  margin-top: 28px;
 }
 
 .menu-link:hover,
 .menu-link:focus {
-  color: var(--main-color);
+  color: var(--primary-color);
 }
 
 .header-contact {
   display: flex;
+  align-items: center;
   gap: 50px;
 }
 
@@ -184,7 +208,7 @@ h6 {
 
 .contact-link:hover,
 .contact-link:focus {
-  color: var(--main-color);
+  color: var(--primary-color);
 }
 
 .contact-icon {
@@ -193,7 +217,7 @@ h6 {
 }
 
 .contact-link:hover .contact-icon {
-  fill: var(--main-color);
+  fill: var(--primary-color);
 }
 
 /* ---FOOTER--- */
@@ -228,7 +252,18 @@ h6 {
 
 .footer-contact-map:hover,
 .footer-contact-map:focus {
-  color: var(--main-color);
+  color: var(--primary-color);
+}
+
+.footer-contact-link {
+  font-style: normal;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-contact-link:hover,
+.footer-contact-link:focus {
+  color: var(--primary-color);
 }
 
 .footer-social {
@@ -237,7 +272,6 @@ h6 {
 
 .footer-social-title {
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -257,14 +291,72 @@ h6 {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   padding: 12px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
 }
 
 .footer-social-icon {
+  fill: #fff;
+}
+
+/* ---MODAL WINDOW--- */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 528px;
+  height: 580px;
+  background-color: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  padding-top: 4px;
+  padding-left: 1px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-close-btn:hover {
+  background-color: tomato;
+}
+
+.modal-close-btn:hover .modal-close-icon {
   fill: #fff;
 }
 
@@ -302,13 +394,21 @@ h6 {
   display: block;
   margin: 0 auto;
   margin-top: 30px;
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
   border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: #f5f4fa;
+  color: #000;
 }
 
 /* ---SECTION BENEFITS--- */
@@ -352,35 +452,37 @@ h6 {
   padding-bottom: 94px;
 }
 
-.service-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-color);
-  margin-bottom: 50px;
-}
-
 .service-list {
   display: flex;
   justify-content: space-between;
+}
+
+.service-item {
+  position: relative;
+}
+
+.service-label {
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.service-label-title {
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 27px 0;
 }
 
 /* ---SECTION TEAM--- */
 
 .team {
   background-color: #f5f4fa;
-}
-
-.team-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-color);
-  margin-bottom: 50px;
 }
 
 .team-list {
@@ -431,15 +533,17 @@ h6 {
   align-items: center;
   justify-content: center;
   border-radius: 100%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover,
 .team-social-link:focus {
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
 }
 
 .team-social-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .team-social-link:hover .team-social-icon,
@@ -448,16 +552,6 @@ h6 {
 }
 
 /* ---SECTION CLIENTS--- */
-
-.clients-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--title-color);
-  margin-bottom: 50px;
-}
 
 .clients-list {
   display: flex;
@@ -471,20 +565,22 @@ h6 {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   padding: 16px 32px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  border: 1px solid var(--main-color);
+  border: 1px solid var(--primary-color);
 }
 
 .clients-link:hover .clients-icon,
 .clients-link:focus .clients-icon {
-  fill: var(--main-color);
+  fill: var(--primary-color);
 }
 
 /* ---END MAIN PAGE=== */
@@ -513,32 +609,61 @@ h6 {
   letter-spacing: 0.03em;
   color: #000;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
   color: #fff;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.card-list {
+.portfolio-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.card-item {
+.portfolio-item {
   flex-basis: calc((100% - 90px) / 3);
 }
 
-.card-item:hover {
+.portfolio-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.card-label {
+.portfolio-thumb {
+  position: relative;
+  height: 294px;
+  width: 370px;
+  overflow: hidden;
+}
+
+.portfolio-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item:hover .portfolio-description {
+  transform: translateY(0);
+}
+
+.portfolio-label {
   width: 370px;
   min-height: 110px;
   border: 1px solid #eeeeee;
@@ -546,7 +671,7 @@ h6 {
   padding: 20px 24px;
 }
 
-.card-title {
+.portfolio-title {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -555,7 +680,7 @@ h6 {
   margin-bottom: 4px;
 }
 
-.card-text {
+.portfolio-text {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
