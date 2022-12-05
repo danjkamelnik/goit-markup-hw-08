@@ -18,37 +18,39 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
-      <div class="header-content container">
-        <a class="header-logo" href="./index.html"><span class="web">Web</span>Studio</a>
-        <nav class="nav">
-          <ul class="menu">
-            <li class="menu-item">
-              <a class="menu-link" href="./index.html">Студія</a>
+      <div class="header__content container">
+        <a class="logo" href="./index.html"><span class="logo__web">Web</span>Studio</a>
+        <nav class="navigation header__navigation">
+          <ul class="menu-list">
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="./index.html">Студія</a>
             </li>
-            <li class="menu-item">
-              <a class="menu-link active-page" href="./portfolio.html">Портфоліо</a>
+            <li class="menu-list__item">
+              <a class="menu-list__link menu-list__link--active" href="./portfolio.html"
+                >Портфоліо</a
+              >
             </li>
-            <li class="menu-item">
-              <a class="menu-link" href="#">Контакти</a>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="#">Контакти</a>
             </li>
           </ul>
         </nav>
-        <ul class="header-contact">
-          <li class="contact-item">
-            <a class="contact-link" href="mailto:info@devstudi.com">
-              <svg class="contact-icon" width="16" height="12">
+        <ul class="contact-wrap">
+          <li class="contact-wrap__item">
+            <a class="contact-wrap__link" href="mailto:info@devstudio.com">
+              <svg class="contact-wrap__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li class="contact-item">
-            <a class="contact-link" href="tel:+380961111111">
-              <svg class="contact-icon" width="10" height="16">
+          <li class="contact-wrap__item">
+            <a class="contact-wrap__link" href="tel:+380961111111">
+              <svg class="contact-wrap__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -62,165 +64,165 @@
       <section class="portfolio section">
         <div class="container">
           <h1 class="visually-hidden">Наші роботи</h1>
-          <ul class="filter-list">
-            <li class="filter-item">
-              <button class="filter-btn" type="button">Усі</button>
+          <ul class="filter">
+            <li class="filter__item">
+              <button class="filter__btn" type="button">Усі</button>
             </li>
-            <li class="filter-item">
-              <button class="filter-btn" type="button">Веб-сайти</button>
+            <li class="filter__item">
+              <button class="filter__btn" type="button">Веб-сайти</button>
             </li>
-            <li class="filter-item">
-              <button class="filter-btn" type="button">Додатки</button>
+            <li class="filter__item">
+              <button class="filter__btn" type="button">Додатки</button>
             </li>
-            <li class="filter-item">
-              <button class="filter-btn" type="button">Дизайн</button>
+            <li class="filter__item">
+              <button class="filter__btn" type="button">Дизайн</button>
             </li>
-            <li class="filter-item">
-              <button class="filter-btn" type="button">Маркетинг</button>
+            <li class="filter__item">
+              <button class="filter__btn" type="button">Маркетинг</button>
             </li>
           </ul>
-          <ul class="portfolio-list">
-            <li class="portfolio-item">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-thumb">
+          <ul class="portfolio__list">
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">
+                <div class="portfolio__thumb">
                   <img src="./images/works/laptop.jpg" width="370" alt="laptop" />
-                  <p class="portfolio-description">
+                  <p class="portfolio__description">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
                     приватну особу.
                   </p>
                 </div>
-                <div class="portfolio-label">
-                  <h2 class="portfolio-title">Технокряк</h2>
-                  <p class="portfolio-text">Веб-сайт</p>
+                <div class="portfolio__label">
+                  <h2 class="portfolio__title">Технокряк</h2>
+                  <p class="portfolio__text">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-thumb">
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">
+                <div class="portfolio__thumb">
                   <img src="./images/works/basketball.jpg" width="370" alt="basketball" />
-                  <p class="portfolio-description">
+                  <p class="portfolio__description">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium rem
                     recusandae, maxime perferendis rerum numquam nemo ea, error dolor porro
                     excepturi atque. Accusantium, similique!
                   </p>
                 </div>
-                <div class="portfolio-label">
-                  <h2 class="portfolio-title">Постер New Orlean vs Golden Star</h2>
-                  <p class="portfolio-text">Дизайн</p>
+                <div class="portfolio__label">
+                  <h2 class="portfolio__title">Постер New Orlean vs Golden Star</h2>
+                  <p class="portfolio__text">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-thumb">
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">
+                <div class="portfolio__thumb">
                   <img src="./images/works/fish.jpg" width="370" alt="fish" />
-                  <p class="portfolio-description">
+                  <p class="portfolio__description">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium rem
                     recusandae, maxime perferendis rerum numquam nemo ea, error dolor porro
                     excepturi atque. Accusantium, similique!
                   </p>
                 </div>
-                <div class="portfolio-label">
-                  <h2 class="portfolio-title">Ресторан Seafood</h2>
-                  <p class="portfolio-text">Додаток</p>
+                <div class="portfolio__label">
+                  <h2 class="portfolio__title">Ресторан Seafood</h2>
+                  <p class="portfolio__text">Додаток</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-thumb">
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">
+                <div class="portfolio__thumb">
                   <img src="./images/works/headphones.jpg" width="370" alt="headphones" />
-                  <p class="portfolio-description">
+                  <p class="portfolio__description">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium rem
                     recusandae, maxime perferendis rerum numquam nemo ea, error dolor porro
                     excepturi atque. Accusantium, similique!
                   </p>
                 </div>
-                <div class="portfolio-label">
-                  <h2 class="portfolio-title">Проєкт Prime</h2>
-                  <p class="portfolio-text">Маркетинг</p>
+                <div class="portfolio__label">
+                  <h2 class="portfolio__title">Проєкт Prime</h2>
+                  <p class="portfolio__text">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-thumb">
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">
+                <div class="portfolio__thumb">
                   <img src="./images/works/box.jpg" width="370" alt="box" />
-                  <p class="portfolio-description">
+                  <p class="portfolio__description">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium rem
                     recusandae, maxime perferendis rerum numquam nemo ea, error dolor porro
                     excepturi atque. Accusantium, similique!
                   </p>
                 </div>
-                <div class="portfolio-label">
-                  <h2 class="portfolio-title">Проєкт Boxes</h2>
-                  <p class="portfolio-text">Додаток</p>
+                <div class="portfolio__label">
+                  <h2 class="portfolio__title">Проєкт Boxes</h2>
+                  <p class="portfolio__text">Додаток</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-thumb">
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">
+                <div class="portfolio__thumb">
                   <img src="./images/works/monitor.jpg" width="370" alt="monitor" />
-                  <p class="portfolio-description">
+                  <p class="portfolio__description">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium rem
                     recusandae, maxime perferendis rerum numquam nemo ea, error dolor porro
                     excepturi atque. Accusantium, similique!
                   </p>
                 </div>
-                <div class="portfolio-label">
-                  <h2 class="portfolio-title">Inspiration has no Borders</h2>
-                  <p class="portfolio-text">Веб-сайт</p>
+                <div class="portfolio__label">
+                  <h2 class="portfolio__title">Inspiration has no Borders</h2>
+                  <p class="portfolio__text">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-thumb">
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">
+                <div class="portfolio__thumb">
                   <img src="./images/works/book.jpg" width="370" alt="book" />
-                  <p class="portfolio-description">
+                  <p class="portfolio__description">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium rem
                     recusandae, maxime perferendis rerum numquam nemo ea, error dolor porro
                     excepturi atque. Accusantium, similique!
                   </p>
                 </div>
-                <div class="portfolio-label">
-                  <h2 class="portfolio-title">Видання Limited Edition</h2>
-                  <p class="portfolio-text">Дизайн</p>
+                <div class="portfolio__label">
+                  <h2 class="portfolio__title">Видання Limited Edition</h2>
+                  <p class="portfolio__text">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-thumb">
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">
+                <div class="portfolio__thumb">
                   <img src="./images/works/lab.jpg" width="370" alt="lab" />
-                  <p class="portfolio-description">
+                  <p class="portfolio__description">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium rem
                     recusandae, maxime perferendis rerum numquam nemo ea, error dolor porro
                     excepturi atque. Accusantium, similique!
                   </p>
                 </div>
-                <div class="portfolio-label">
-                  <h2 class="portfolio-title">Проєкт LAB</h2>
-                  <p class="portfolio-text">Маркетинг</p>
+                <div class="portfolio__label">
+                  <h2 class="portfolio__title">Проєкт LAB</h2>
+                  <p class="portfolio__text">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="portfolio-item">
-              <a class="portfolio-link" href="#">
-                <div class="portfolio-thumb">
+            <li class="portfolio__item">
+              <a class="portfolio__link" href="#">
+                <div class="portfolio__thumb">
                   <img src="./images/works/keyboard.jpg" width="370" alt="keyboard" />
-                  <p class="portfolio-description">
+                  <p class="portfolio__description">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium rem
                     recusandae, maxime perferendis rerum numquam nemo ea, error dolor porro
                     excepturi atque. Accusantium, similique!
                   </p>
                 </div>
-                <div class="portfolio-label">
-                  <h2 class="portfolio-title">Growing Business</h2>
-                  <p class="portfolio-text">Додаток</p>
+                <div class="portfolio__label">
+                  <h2 class="portfolio__title">Growing Business</h2>
+                  <p class="portfolio__text">Додаток</p>
                 </div>
               </a>
             </li>
@@ -230,58 +232,60 @@
     </main>
 
     <footer class="footer">
-      <div class="footer-content container">
-        <div class="footer-contact">
-          <a class="footer-contact-logo" href="./index.html"><span class="web">Web</span>Studio</a>
+      <div class="footer__wrapper container">
+        <div class="footer__wrap">
+          <a class="logo footer__logo logo--inverse" href="./index.html">
+            <span class="logo__web">Web</span>Studio
+          </a>
           <address>
-            <ul class="footer-contact-list">
-              <li class="footer-contact-item">
+            <ul class="contact-list">
+              <li class="contact-list__item">
                 <a
-                  class="footer-contact-map"
+                  class="contact-list__map"
                   href="https://goo.gl/maps/m74xXEFrYxud1jqV6"
                   target="_blank"
                   rel="noreferrer noopener nofollow"
                   >м. Київ, пр-т Лесі Українки, 26
                 </a>
               </li>
-              <li class="footer-contact-item">
-                <a class="footer-contact-link" href="mailto:info@devstudio.com">
+              <li class="contact-list__item">
+                <a class="contact-list__link" href="mailto:info@devstudio.com">
                   info@devstudio.com
                 </a>
               </li>
-              <li class="footer-contact-item">
-                <a class="footer-contact-link" href="tel:+380961111111">+38 096 111 11 11</a>
+              <li class="contact-list__item">
+                <a class="contact-list__link" href="tel:+380961111111">+38 096 111 11 11</a>
               </li>
             </ul>
           </address>
         </div>
-        <div class="footer-social">
-          <p class="footer-social-title">Приєднуйтесь</p>
-          <ul class="footer-social-list">
-            <li class="footer-social-item">
-              <a class="footer-social-link" href="#">
-                <svg class="footer-social-icon" width="20" height="20">
+        <div class="footer__wrap">
+          <p class="footer__subtitle">Приєднуйтесь</p>
+          <ul class="social">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link" href="#">
-                <svg class="footer-social-icon" width="20" height="20">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link" href="#">
-                <svg class="footer-social-icon" width="20" height="20">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-            <li class="footer-social-item">
-              <a class="footer-social-link" href="#">
-                <svg class="footer-social-icon" width="20" height="20">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__icon" width="20" height="20">
                   <use href="./images/icons.svg#icon-linkedin"></use>
                 </svg>
               </a>
@@ -289,14 +293,20 @@
           </ul>
         </div>
         <div class="subscribe">
-          <p class="subscribe-title">Підпишіться на розсилку</p>
-          <form class="subscribe-form" name="subscribe">
-            <div class="subscribe-wrap">
-              <input type="email" class="subscribe-input" name="subscribe" placeholder="E-mail" />
-              <button class="subscribe-btn" type="submit">
+          <label class="subscribe__label" for="subscribe-mail">Підпишіться на розсилку</label>
+          <form class="subscribe__form" name="subscribe">
+            <div class="subscribe__input-wrap">
+              <input
+                type="email"
+                class="subscribe__input"
+                name="subscribe"
+                placeholder="E-mail"
+                id="subscribe-mail"
+              />
+              <button class="subscribe__btn" type="submit">
                 Підписатись
                 <span>
-                  <svg class="subscribe-icon" width="24" height="24">
+                  <svg class="subscribe__icon" width="24" height="24">
                     <use href="./images/icons.svg#icon-subscribe"></use>
                   </svg>
                 </span>
