@@ -55,6 +55,57 @@
             >
           </li>
         </ul>
+        <button class="mobile-menu__open" type="button" data-mobile-open>
+          <svg class="mobile-menu__icon" width="24" height="16">
+            <use href="./images/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu is-hidden" data-mobile>
+        <button class="mobile-menu__close" type="button" data-mobile-close>
+          <svg class="mobile-menu__icon" width="20" height="20">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <div class="mobile-wrap">
+          <ul class="mobile-list">
+            <li class="mobile-list__item">
+              <a class="mobile-list__link mobile-list__link--active" href="./index.html">Студія</a>
+            </li>
+            <li class="mobile-list__item">
+              <a class="mobile-list__link" href="./portfolio.html">Портфоліо</a>
+            </li>
+            <li class="mobile-list__item">
+              <a class="mobile-list__link" href="#">Контакти</a>
+            </li>
+          </ul>
+        </div>
+        <div class="mobile-wrap">
+          <ul class="mobile-contact">
+            <li class="mobile-contact__item">
+              <a class="mobile-contact__phone" href="tel:+380961111111"> +38 096 111 11 11</a>
+            </li>
+            <li class="mobile-contact__item">
+              <a class="mobile-contact__mail" href="mailto:info@devstudio.com">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-social">
+            <li class="mobile-social__item">
+              <a class="mobile-social__link" href="#">Instagram</a>
+            </li>
+            <li class="mobile-social__item">
+              <a class="mobile-social__link" href="#">Twitter</a>
+            </li>
+            <li class="mobile-social__item">
+              <a class="mobile-social__link" href="#">Facebook</a>
+            </li>
+            <li class="mobile-social__item">
+              <a class="mobile-social__link" href="#">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -149,7 +200,29 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img src="./images/team/ihor.jpg" width="270" alt="Ігор Дем'яненко" />
+              <picture>
+                <source
+                  srcset="./images/team/ihor/ihor.jpg 1x, ./images/team/ihor/ihor-2x.jpg 2x"
+                  media="(min-width: 1200px max-width: 479px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/ihor/ihor-tablet.jpg    1x,
+                    ./images/team/ihor/ihor-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/ihor/ihor-mobile.jpg    1x,
+                    ./images/team/ihor/ihor-mobile-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img src="./images/team/ihor/ihor-mobile.jpg" width="450" alt="Ігор Дем'яненко" />
+              </picture>
+
               <h3 class="team__name">Ігор Дем'яненко</h3>
               <p class="team__rank">Product Designer</p>
               <ul class="team-social">
@@ -204,7 +277,28 @@
               </ul>
             </li>
             <li class="team__item">
-              <img src="./images/team/olha.jpg" width="270" alt="Ольга Рєпіна" />
+              <picture>
+                <source
+                  srcset="./images/team/olha/olha.jpg 1x, ./images/team/olha/olha-2x.jpg 2x"
+                  media="(min-width: 1200px max-width: 479px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/olha/olha-tablet.jpg    1x,
+                    ./images/team/olha/olha-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/olha/olha-mobile.jpg    1x,
+                    ./images/team/olha/olha-mobile-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img src="./images/team/olha/olha-mobile.jpg" width="450" alt="Ольга Рєпіна" />
+              </picture>
               <h3 class="team__name">Ольга Рєпіна</h3>
               <p class="team__rank">Frontend Developer</p>
               <ul class="team-social">
@@ -259,7 +353,28 @@
               </ul>
             </li>
             <li class="team__item">
-              <img src="./images/team/nick.jpg" width="270" alt="Микола Тарасов" />
+              <picture>
+                <source
+                  srcset="./images/team/nick/nick.jpg 1x, ./images/team/nick/nick-2x.jpg 2x"
+                  media="(min-width: 1200px max-width: 479px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/nick/nick-tablet.jpg    1x,
+                    ./images/team/nick/nick-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/nick/nick-mobile.jpg    1x,
+                    ./images/team/nick/nick-mobile-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img src="./images/team/nick/nick-mobile.jpg" width="450" alt="Микола Тарасов" />
+              </picture>
               <h3 class="team__name">Микола Тарасов</h3>
               <p class="team__rank">Marketing</p>
               <ul class="team-social">
@@ -314,7 +429,28 @@
               </ul>
             </li>
             <li class="team__item">
-              <img src="./images/team/mike.jpg" width="270" alt="Михайло Єрмаков" />
+              <picture>
+                <source
+                  srcset="./images/team/mike/mike.jpg 1x, ./images/team/mike/mike-2x.jpg 2x"
+                  media="(min-width: 1200px max-width: 479px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mike/mike-tablet.jpg    1x,
+                    ./images/team/mike/mike-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mike/mike-mobile.jpg    1x,
+                    ./images/team/mike/mike-mobile-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+
+                <img src="./images/team/mike/mike-mobile.jpg" width="450" alt="Михайло Єрмаков" />
+              </picture>
               <h3 class="team__name">Михайло Єрмаков</h3>
               <p class="team__rank">UI Designer</p>
               <ul class="team-social">
@@ -508,6 +644,7 @@
         </div>
       </div>
     </footer>
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__close-btn" data-modal-close title="Закрити">
@@ -571,5 +708,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
