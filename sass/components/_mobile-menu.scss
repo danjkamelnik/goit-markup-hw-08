@@ -77,8 +77,8 @@
 
 .mobile-contact__phone {
   font-weight: 500;
-  font-size: 34px;
-  line-height: 40px;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--primary-color);
 
@@ -86,12 +86,16 @@
   &:focus {
     color: #757575;
   }
+
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+  }
 }
 
 .mobile-contact__mail {
   font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: #757575;
 
@@ -99,10 +103,15 @@
   &:focus {
     color: var(--primary-color);
   }
+
+  @media screen and (min-width: 480px) {
+    font-size: 24px;
+  }
 }
 
 .mobile-social {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -113,7 +122,7 @@
 
 .mobile-social__link {
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
@@ -121,5 +130,9 @@
   &:hover,
   &:focus {
     color: #757575;
+  }
+
+  @media screen and (min-width: 480px) {
+    font-size: 24px;
   }
 }
