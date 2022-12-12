@@ -371,17 +371,16 @@ h6 {
   justify-content: space-between;
   z-index: 100;
 }
-
-.mobile-menu__icon {
-  width: 30px;
-  height: 16px;
-  background-color: #fff;
-  fill: #303030;
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .mobile-menu__open {
   display: block;
   margin-left: auto;
+  background-color: transparent;
 }
 @media screen and (min-width: 768px) {
   .mobile-menu__open {
@@ -394,10 +393,7 @@ h6 {
   fill: #000;
   top: 21px;
   right: 25px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #fff;
+  background-color: transparent;
   transition: fill 250ms linear;
 }
 .mobile-menu__close:hover, .mobile-menu__close:focus {
@@ -582,6 +578,16 @@ h6 {
 .contact-wrap__link:hover, .contact-wrap__link:focus {
   color: var(--primary-color);
 }
+@media screen and (min-width: 768px) {
+  .contact-wrap__link {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact-wrap__link {
+    font-size: 14px;
+  }
+}
 
 .contact-wrap__icon {
   fill: currentColor;
@@ -596,6 +602,8 @@ h6 {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg/background-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  max-width: 480px;
+  margin: 0 auto;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
@@ -605,6 +613,7 @@ h6 {
 @media screen and (min-width: 481px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg/background-tablet.png");
+    max-width: 1200px;
   }
 }
 @media screen and (min-width: 481px) and (min-device-pixel-ratio: 2), screen and (min-width: 481px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 481px) and (min-resolution: 192dpi), screen and (min-width: 481px) and (min-resolution: 2dppx) {
@@ -614,10 +623,9 @@ h6 {
 }
 @media screen and (min-width: 769px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/bg/background.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg/background.jpg");
     padding: 200px 0;
     max-width: 1600px;
-    margin: 0 auto;
   }
 }
 @media screen and (min-width: 769px) and (min-device-pixel-ratio: 2), screen and (min-width: 769px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 769px) and (min-resolution: 192dpi), screen and (min-width: 769px) and (min-resolution: 2dppx) {

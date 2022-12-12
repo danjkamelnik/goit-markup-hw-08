@@ -10,18 +10,16 @@
   flex-direction: column;
   justify-content: space-between;
   z-index: 100;
-}
 
-.mobile-menu__icon {
-  width: 30px;
-  height: 16px;
-  background-color: #fff;
-  fill: #303030;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .mobile-menu__open {
   display: block;
   margin-left: auto;
+  background-color: transparent;
 
   @media screen and (min-width: 768px) {
     display: none;
@@ -33,10 +31,7 @@
   fill: #000;
   top: 21px;
   right: 25px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #fff;
+  background-color: transparent;
   transition: fill 250ms linear;
 
   &:hover,
